@@ -7,6 +7,7 @@ $prioridad=$_GET['prioridad'];
 
 
 $idm=$_GET['id'];
+$descripcionm=$_GET['descripcion'];
 $fechaentrega=$_GET['fechaentrega'];
 ?>
 
@@ -61,6 +62,11 @@ $fechaentrega=$_GET['fechaentrega'];
 				
 				
 				<table>
+				
+				<tr>
+				<td><div><label>Nombre:</label></div></td>
+				<td><div><input type="text" name="descripcion" value="<?php echo $descripcionm; ?>" /></div></td>
+				</tr>
 				
 				<tr>
 				<td><label>Fecha Entrega*</label></td>

@@ -3,7 +3,7 @@
 include('conexion.php');
 
 		$id=$_POST['id'];
-		$nombretarea=$_POST['nombretarea'];
+		$descripcion=$_POST['descripcion'];
         $fechaasignacion=$_POST['fechaasignacion'];
         $fechaentrega=$_POST['fechaentrega'];	
 	
