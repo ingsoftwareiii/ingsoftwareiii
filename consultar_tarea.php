@@ -5,9 +5,12 @@ include('conexion.php');
 
 	$conexion=conectar();
 	
+	$id=$_SESSION[__default][user]->id;
+	
+	
 	/*listar tareas de una persona--docente 
 	*/
-	$sql_consultar_tareas="SELECT t.`nombre`, tu.`descripcion`, tu.`prioridad`, tu.`fechaasignacion`, tu.`fechaentrega`, do.`ruta` FROM `tareaUsuario` tu JOIN `tarea` t ON tu.`tarea`=t.`id` JOIN `documento` do ON do.`tarea`=t.`id`";
+	$sql_consultar_tareas="SELECT t.`nombre`, tu.`descripcion`, tu.`prioridad`, tu.`fechaasignacion`, tu.`fechaentrega`, do.`ruta` FROM `tareaUsuario` tu JOIN `tarea` t ON tu.`tarea`=t.`id` JOIN `documento` do ON do.`tarea`=t.`id`  WHERE tu.`propietario`=$id";
 	
 	$result=mysql_query($sql_consultar_tareas,$conexion) or mysql_error();
 	
@@ -15,8 +18,9 @@ include('conexion.php');
 
 
 
-<html>	
-
+<html>
+	<?php echo $sql_consultar_tareas;
+	?>
 	<a><b>Lista de Tareas pendientes </b></a>
 	<br /><br />
 	<table border="1" align="center">
