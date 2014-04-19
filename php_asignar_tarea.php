@@ -14,11 +14,14 @@ include('conexion.php');
 	
 
 
-	$sql_asignar_tarea="INSERT INTO `tareaUsuario` (`id`, `tarea`, `propietario`, `responsable`, `fehaasignacion`, `fechaentrega`, `prioridad`, `estado`, `descripcion`) VALUES (NULL,'$tarea','$propietario','$responsable','$fechaasignacion','$fechaentrega','$prioridad','$estado','$descripcion')";
+	$sql_asignar_tarea="insert into tareaUsuario (id, tarea, propietario, responsable, fechaasignacion, fechaentrega, prioridad, estado, descripcion) VALUES ('','$tarea','$propietario','$responsable','$fechaasignacion','$fechaentrega','$prioridad','$estado','$descripcion')";
+	
+
+	
 	$conexion=conectar();
 	$consulta_registro=mysql_query($sql_asignar_tarea,$conexion) or mysql_error();
 	
-	echo $sql_asignar_tarea;
+
 	
     if($consulta_registro){
          	echo '<script>alert("Se asigno la tarea Correctamente")
@@ -29,10 +32,11 @@ include('conexion.php');
         
     }else{
 	
-		
-         	echo '<script>alert("No se pudo completar la accion'.$sql_asignar_tarea.'")
+         	echo '<script>alert("No se pudo completar la accion")
  			history.back()
 		 			</script>';
+					
+					
     }
 	
 
