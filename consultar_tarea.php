@@ -19,8 +19,7 @@ include('conexion.php');
 
 
 <html>
-	<?php echo $sql_consultar_tareas;
-	?>
+	
 	<a><b>Lista de Tareas pendientes </b></a>
 	<br /><br />
 	<table border="1" align="center">
