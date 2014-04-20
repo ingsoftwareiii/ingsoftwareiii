@@ -1,10 +1,9 @@
 
 <?php
-
-$id=$_GET['id'];
-$nombre=$_GET['name'];
-$username=$_GET['username'];
-$email=$_GET['email'];
+	$id=$_SESSION[__default][user]->id;
+	$name=$_SESSION[__default][user]->name;
+	$username=$_SESSION[__default][user]->username;
+	$email=$_SESSION[__default][user]->email;
 
 ?>
 
@@ -15,14 +14,12 @@ $email=$_GET['email'];
             <div style="display: inline-block; float: left; width: 45%">
 			<form action="/code/editar_perfil.php" method="POST">
 			<input type="hidden" name="id" value="<?php echo $id; ?>" />
-			
-			
 			<a><b>Modificar Perfil</b></a>
 			
 			<table>	
 				<tr>
 				<td><div><label>Nombre:</label></div></td>
-				<td><div><input type="text" name="name" value="<?php echo $nombre; ?>" /></div></td>
+				<td><div><input type="text" name="name" value="<?php echo $name; ?>" /></div></td>
 				</tr>
 				
 				<tr>
