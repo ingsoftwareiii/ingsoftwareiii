@@ -23,8 +23,7 @@ include('conexion.php');
 	$sql_listar_tareas="Select id, nombre from tarea";
 	$result=mysql_query($sql_listar_tareas,$conexion) or mysql_error();
 	
-	while($row=mysql_fetch_array($result))
-	{
+	while($row=mysql_fetch_array($result)){
 		$id=$row['id'];
 		$nombre=$row['nombre'];
 		$options_nombre.='<option value="'.$id.'">'.$nombre.'</option>';
@@ -35,8 +34,7 @@ include('conexion.php');
 	$sql_propietario="Select id, name from acr_users";
 	$resultpropi=mysql_query($sql_propietario,$conexion) or mysql_error();
 	
-	while($row=mysql_fetch_array($resultpropi))
-	{
+	while($row=mysql_fetch_array($resultpropi)){
 		$id=$row['id'];
 		$name=$row['name'];
 		$options_name.='<option value="'.$id.'">'.$name.'</option>';
