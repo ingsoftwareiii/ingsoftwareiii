@@ -12,8 +12,7 @@ function conectar(){
 	}
 
 
-	function getQuery($consulta)
-	{
+	function getQuery($consulta){
 		$query=mysql_query($consulta);
 		$resultado=mysql_fetch_array($query);
 		return $resultado;
@@ -23,8 +22,7 @@ function conectar(){
 		$query=mysql_query($consulta);
 		return $query;
 	}
-	function getInsert($consulta,$conexion)
-	{
+	function getInsert($consulta,$conexion){
 		if(mysql_query($consulta,$conexion)or die(mysql_error())){
 			return true;
 		}
@@ -33,8 +31,7 @@ function conectar(){
 		}
 	}
 
-	function getUpdate($consulta,$conexion)
-	{
+	function getUpdate($consulta,$conexion){
 		if(mysql_query($consulta,$conexion)or die(mysql_error())){
 			return true;
 		}
@@ -43,8 +40,7 @@ function conectar(){
 		}
 	}
 
-	function getDelete($consulta,$conexion)
-	{
+	function getDelete($consulta,$conexion){
 		if(mysql_query($consulta,$conexion)or die(mysql_error())){
 			return true;
 		}
