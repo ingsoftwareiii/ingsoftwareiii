@@ -18,6 +18,7 @@ function conectar(){
 		return $resultado;
 	}
 
+	
 	function getConsulta($consulta){
 		$query=mysql_query($consulta);
 		return $query;
