@@ -9,13 +9,12 @@ include('conexion.php');
 	$tarea=$_POST['tarea'];
 	
 
-/* Lista todas las tareas en la base de datos
+	/* Lista todas las tareas en la base de datos
 	*/
 	$sql_listar_tareas="Select id, nombre from tarea";
 	$result=mysql_query($sql_listar_tareas,$conexion) or mysql_error();
 	
-	while($row=mysql_fetch_array($result))
-	{
+	while($row=mysql_fetch_array($result)){
 		$id=$row['id'];
 		$nombre=$row['nombre'];
 		$options_nombre.='<option value="'.$id.'">'.$nombre.'</option>';
