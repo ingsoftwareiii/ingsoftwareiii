@@ -9,24 +9,24 @@
 
         
 		
-	<tr>
-			<td><label>Prioridad*</label></td>
-			<td> <Select name="prioridad">
-				<OPTION VALUE="alta">Alta</OPTION>
-			<OPTION VALUE="media">Media</OPTION>
-				<OPTION VALUE="baja">Baja</OPTION>
-			</select>
-			</td>
-	</tr>
+       <tr>
+                        <td><label>Prioridad*</label></td>
+                        <td> <Select name="prioridad">
+                             <OPTION VALUE="alta">Alta</OPTION>
+                             <OPTION VALUE="media">Media</OPTION>
+                             <OPTION VALUE="baja">Baja</OPTION> 
+                             </select>
+                       </td>
+                       </tr>
         
-	<tr>    
+        <tr>    
             <td><label>Descripcion*</label></td>
             <td> <textarea rows="4" cols="50" name="descripcion"required="required"> </textarea> </td>
         </tr>
 
 
 
-    </table>
- <button type="submit">Registrar</button>
+     </table>
+     <button type="submit">Registrar</button>
 </form>
 </div>
