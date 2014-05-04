@@ -4,7 +4,6 @@ include('conexion.php');
 
        $conexion=conectar();
 	
-	
        $id=$_POST['id'];
        $tarea=$_POST['tarea'];
        $propietario=$_POST['propietario'];
@@ -49,7 +48,7 @@ include('conexion.php');
            <td><label>Tarea*</label></td>
            <td> 
                <select id="tarea" name="tarea" required="required">
-                  <?php echo $options_nombre; ?>
+               <?php echo $options_nombre; ?>
                </select>
            </td>
 </tr>
